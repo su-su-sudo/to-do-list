@@ -105,7 +105,7 @@ app.post("/delete", function(req, res){
 
 
 app.get("/:listName", function(req,res){
-  const listName = _.capitalize(req.params.listName);
+  const listName = _.lowerCase(req.params.listName);
   if(listName === "Cool"){
     res.send(cool());
   }
